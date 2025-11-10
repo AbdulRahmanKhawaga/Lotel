@@ -15,7 +15,7 @@ const GetApp = () => {
           breadcrumb="Home / Get App"
         />
 
-        <section className="container mx-auto px-4 py-20">
+        <section className="mx-auto max-w-6xl px-4 md:px-6 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div className="space-y-8">

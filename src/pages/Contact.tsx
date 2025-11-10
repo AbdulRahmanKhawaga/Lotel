@@ -33,8 +33,8 @@ const Contact = () => {
       <main className="pt-16">
         <Hero title="Contact Us" breadcrumb="Home / Contact" />
 
-        <section className="container mx-auto px-4 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <section className="mx-auto max-w-6xl px-4 md:px-6 py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form */}
             <div className="bg-card p-8 rounded-2xl shadow-[var(--shadow-elegant)] border border-border">
               <h2 className="text-3xl font-bold mb-6">Send us a message</h2>

@@ -63,6 +63,24 @@ const Home = () => {
       originalPrice: 310,
       discount: 22,
     },
+    {
+      name: "Venice",
+      image: veniceImg,
+      rating: "9/10",
+      reviews: 100,
+      price: 260,
+      originalPrice: 330,
+      discount: 21,
+    },
+    {
+      name: "Nice",
+      image: niceImg,
+      rating: "9/10",
+      reviews: 100,
+      price: 230,
+      originalPrice: 300,
+      discount: 23,
+    },
   ];
 
   const scroll = (direction: "left" | "right") => {
@@ -129,7 +147,7 @@ const Home = () => {
               <Button
                 variant="secondary"
                 size="icon"
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden md:flex"
+                className="absolute -left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex rounded-full bg-card/80 backdrop-blur-sm shadow-[var(--shadow-elegant)] border border-border"
                 onClick={() => scroll("left")}
               >
                 <ChevronLeft className="h-5 w-5" />
@@ -150,7 +168,7 @@ const Home = () => {
               <Button
                 variant="secondary"
                 size="icon"
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 hidden md:flex"
+                className="absolute -right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex rounded-full bg-card/80 backdrop-blur-sm shadow-[var(--shadow-elegant)] border border-border"
                 onClick={() => scroll("right")}
               >
                 <ChevronRight className="h-5 w-5" />
