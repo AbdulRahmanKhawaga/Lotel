@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-4 md:px-6 py-12">
         {/* Newsletter / CTA Bar */}
         <div className="mb-12">
-          <div className="bg-primary text-primary-foreground rounded-2xl px-6 py-8 shadow-[var(--shadow-elegant)] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="bg-primary text-primary-foreground rounded-2xl px-8 py-6 md:py-8 shadow-[var(--shadow-elegant)] flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-start gap-4">
               <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center">
                 <Mail className="h-6 w-6 text-white" />
@@ -22,9 +22,9 @@ const Footer = () => {
               <Input
                 type="email"
                 placeholder="Enter your email..."
-                className="w-full rounded-full bg-white/20 placeholder-white/80 text-white border-white/30 focus-visible:ring-white/60"
+                className="w-full rounded-full bg-white/20 placeholder-white/80 text-white border-white/30 focus-visible:ring-white/60 pr-14 pl-4 py-6"
               />
-              <Button type="submit" size="icon" className="absolute right-1.5 top-1.5 h-10 w-10 rounded-full bg-accent text-accent-foreground shadow">
+              <Button type="submit" size="icon" className="absolute right-1.5 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-accent text-accent-foreground shadow">
                 <Send className="h-5 w-5" />
               </Button>
             </form>
@@ -77,7 +77,7 @@ const Footer = () => {
                 <p className="text-sm text-muted-foreground">Location:</p>
                 <div className="flex items-center gap-2 mt-1">
                   <MapPin className="h-5 w-5 text-muted-foreground" />
-                  <span className="text-foreground">Morocco</span>
+                  <span className="text-foreground">KSA</span>
                 </div>
               </li>
               <li>
@@ -91,7 +91,7 @@ const Footer = () => {
                 <p className="text-sm text-muted-foreground">Phone:</p>
                 <div className="flex items-center gap-2 mt-1">
                   <Phone className="h-5 w-5 text-muted-foreground" />
-                  <span className="text-foreground">+000000000000</span>
+                  <span className="text-foreground">+966570017439</span>
                 </div>
               </li>
             </ul>
