@@ -1,151 +1,165 @@
-# LOTEL — Project README
+# LOTEL — Modern Hotel Listing & Reservation UI
 
-Short description
-- LOTEL: responsive hotel listing/reservation website built with React, TypeScript and Vite. Contains public pages, contact and newsletter UI, and a small component library.
+A responsive hotel discovery and reservation front‑end built with React, TypeScript, and Vite. It features a polished UI, newsletter signup, contact page, reusable components, and a Tailwind-powered design system.
 
-Technologies
-- React + TypeScript
-- Vite
-- Tailwind CSS (utility classes visible in code)
-- lucide-react for icons
-- Local component library under src/components
-- Recommended tooling: Node.js (LTS), npm or yarn, Git
+<p align="center">
+  <a href="https://react.dev"><img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white"></a>
+  <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white"></a>
+  <a href="https://vitejs.dev"><img alt="Vite" src="https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white"></a>
+  <a href="https://tailwindcss.com"><img alt="Tailwind" src="https://img.shields.io/badge/Tailwind%20CSS-3.x-06B6D4?logo=tailwindcss&logoColor=white"></a>
+  <a href="https://lucide.dev"><img alt="Lucide" src="https://img.shields.io/badge/lucide--react-Icons-000000?logo=lucide&logoColor=white"></a>
+</p>
 
-Quick links (routes / pages)
-- /                — Home (hero, featured hotels)
-- /about           — About
-- /features        — Features (optional)
-- /pricing         — Pricing (optional)
-- /blog            — Blog list
-- /blog/:slug      — Blog post
-- /docs            — Documentation (optional)
-- /contact         — Contact form & info
-- /login, /signup  — Auth pages
-- /account         — User dashboard
-- /admin           — Admin dashboard (optional)
-- 404              — Not-found page
+---
 
-Repository layout (important files/folders)
-- public/ or static/  — static assets (images, icons, favicon)
-- src/
-  - components/       — reusable UI components (Header, Footer, Inputs, Buttons)
-  - pages/ or routes/  — page-level components
-  - styles/           — global styles, tailwind config
-  - App.tsx, main.tsx  — application entry
-- package.json
-- tsconfig.json
-- vite.config.ts
-- .env.example
-- README.md
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Development Scripts](#development-scripts)
+- [Environment Variables](#environment-variables)
+- [Project Structure](#project-structure)
+- [Routes](#routes)
+- [Development Workflow](#development-workflow)
+- [Accessibility & Performance](#accessibility--performance)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [Troubleshooting](#troubleshooting)
 
-Prerequisites
-- Node.js (LTS recommended — e.g. 18.x or 20.x)
-- npm (>= 8) or yarn
+---
+
+## Features
+- Responsive UI with modern layout and theming.
+- Reusable components (navigation, hero, footer, inputs, buttons).
+- Newsletter CTA with email capture UI.
+- Contact page with form and toast feedback.
+- Basic pages: Home, About, Support, Contact, Not Found.
+- Clean, utility-first styling via Tailwind CSS.
+
+## Tech Stack
+- `React` + `TypeScript`
+- `Vite` for dev/build tooling
+- `Tailwind CSS` for styling
+- `lucide-react` for icons
+- Local component library under `src/components/ui`
+
+## Getting Started
+
+### Prerequisites
+- `Node.js` LTS (18.x or 20.x recommended)
+- `npm` (>= 8) or `yarn`
 - Git
 
-Install locally
-1. Clone
-   - git clone https://github.com/your-org/your-repo.git
-   - cd your-repo
-2. Install dependencies
-   - npm: npm install
-   - yarn: yarn
-3. Create env file
-   - Copy .env.example to .env and set values:
-     - VITE_API_URL=https://api.example.com
-     - PORT=5173
-     - AUTH_SECRET=your_jwt_secret
-     - DATABASE_URL=postgres://user:pass@host:port/db
-   - Note: Vite requires client-side env keys to start with VITE_ (e.g. VITE_API_URL)
+### Installation
+```bash
+# Clone and enter the project
+git clone <repo-url>
+cd lotel_app
 
-Common scripts
-- npm run dev        — start dev server (Vite). Defaults to http://localhost:5173
-- npm run build      — build production files into /dist
-- npm run preview    — preview production build locally
-- npm run lint       — run ESLint
-- npm run format     — run Prettier/formatter
-- npm test           — run unit tests
-
-(Example package.json scripts)
-```json
-{
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview --port 5173",
-    "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,md}\"",
-    "test": "vitest"
-  }
-}
+# Install dependencies
+npm install
+# or
+yarn
 ```
 
-Running on Windows (PowerShell)
-- Install: npm install
-- Dev: npm run dev
-- Build: npm run build
-- Preview: npm run preview
+### Development Scripts
+```bash
+# Start dev server (Vite) — http://localhost:5173
+npm run dev
 
-Environment variables and secrets
-- Keep secrets out of version control. Use .env.local or secret storage for CI.
-- Prefix frontend-exposed keys with VITE_ (Vite requirement).
-- Example .env.example in repo.
+# Build production assets into /dist
+npm run build
 
-Testing & linting
-- Unit tests: Vitest / Jest (project dependent). Run npm test.
-- Linting: ESLint (configure with TypeScript support). Run npm run lint.
-- Formatting: Prettier. Run npm run format or integrate with CI/pre-commit.
+# Preview the production build locally
+npm run preview
 
-Accessibility & Performance
-- Use semantic HTML and ARIA attributes where needed.
-- Optimize images (next-gen formats / responsive srcsets).
-- Audit with Lighthouse and fix accessibility/performance issues.
+# Lint source files
+npm run lint
 
-Build & deployment
-- Static: Netlify, Vercel, GitHub Pages, S3 + CloudFront — build then deploy /dist.
-- Server: Deploy Node server or serverless functions to Vercel/Heroku/AWS.
-- CI: On push to main, run lint → tests → build → deploy.
+# Format code (if configured)
+npm run format
 
-CI example (GitHub Actions)
-- Lint and test on PR
-- Build and deploy on push to main
-- Use secrets for production env vars
+# Run unit tests (if configured)
+npm test
+```
 
-Database & backend (if applicable)
-- Run migrations and seeds (framework-specific)
-- Set DATABASE_URL in .env
-- Keep backups and use migrations for schema changes
+## Environment Variables
+Create a `.env` file in the project root (copy from `.env.example` if available). Values exposed to the client must be prefixed with `VITE_`.
 
-Security & best practices
-- Do not commit .env or secrets.
-- Use HTTPS in production.
-- Run npm audit and keep deps updated.
-- Validate & sanitize inputs on server side.
+```env
+# Example
+VITE_API_URL=https://api.example.com
+PORT=5173
+AUTH_SECRET=your_jwt_secret
+DATABASE_URL=postgres://user:pass@host:port/db
+```
 
-Contributing
-- Fork -> branch -> PR with clear description.
-- Add tests for new features or bugfixes.
-- Follow code style (run format and lint before PR).
-- Update changelog or releases.
+> Note: Only variables prefixed with `VITE_` are accessible in the browser when using Vite.
 
-Troubleshooting (common)
-- Port in use: change PORT or kill process
-- Missing env: ensure .env exists and required values are present
-- Build errors: check Node version and dependency compatibility
+## Project Structure
+```text
+f:/lotel_app
+├── public/
+│   ├── favicon.svg
+│   └── vite.svg
+├── src/
+│   ├── App.tsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── Footer.tsx
+│   │   ├── Navigation.tsx
+│   │   ├── Hero.tsx
+│   │   ├── SearchForm.tsx
+│   │   └── ui/            # Reusable UI primitives (input, button, etc.)
+│   ├── hooks/
+│   ├── pages/             # Page-level components (Home, About, Contact, ...)
+│   ├── index.css          # Global styles / Tailwind layers
+│   ├── main.tsx           # App entry
+│   └── lib/utils.ts
+├── index.html
+├── package.json
+├── tailwind.config.ts
+├── tsconfig*.json
+└── vite.config.ts
+```
 
-License
-- Add a LICENSE file (e.g. MIT). Update package.json license field.
+## Routes
+```text
+/                Home
+/about           About
+/contact         Contact form & info
+/support         Support/FAQs
+/get-app         Get the App (CTA)
+/404             Not-found page
+```
 
-Contact & support
-- Create GitHub issues for bugs or feature requests.
-- For urgent support: supply contact email in repo metadata or organization settings.
+## Development Workflow
+- Use feature branches for new work; keep PRs focused and small.
+- Lint and format before committing: `npm run lint` and `npm run format`.
+- Prefer typed props and clear component interfaces.
+- Keep UI consistent with Tailwind utility classes and existing patterns.
 
-Changelog
-- Maintain CHANGELOG.md or use GitHub releases to summarize notable changes.
+## Accessibility & Performance
+- Use semantic HTML; include ARIA attributes when appropriate.
+- Optimize images and prefer next-gen formats.
+- Validate with Lighthouse and fix accessibility/performance issues.
 
-Notes specific to this repo
-- Footer component: src/components/Footer.tsx — contains newsletter CTA, contact list, social icons.
-- Tailwind utility classes are used extensively; adjust tailwind.config.js for themes and colors.
-- Env variables used by client must be prefixed with VITE_.
+## Deployment
+- Static hosting (Netlify, Vercel, GitHub Pages): build with `npm run build`, deploy the `dist/` folder.
+- Server deployments: serve the built assets via a Node server or your platform of choice.
 
-This README is a curated template. Edit sections to match project-specific scripts, tools, CI settings and deployment targets.
+## Contributing
+- Fork → branch → PR with a clear description.
+- Add tests for new features or bug fixes where applicable.
+- Run `npm run lint` and `npm run format` before submitting.
+
+## Troubleshooting
+- Port in use: change `PORT` env or stop the existing process.
+- Missing env: ensure `.env` exists and required values are set.
+- Build errors: verify Node version and dependency compatibility.
+
+---
+
+This README is optimized for GitHub: clear sections, table of contents, formatted code blocks, and links to major technologies. Adjust to match organization standards or CI/CD setup as needed.
